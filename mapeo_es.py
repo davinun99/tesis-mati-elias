@@ -43,7 +43,7 @@ settings = {
 	}
 }
 
-edca_mapping = {
+ocds_mapping = {
   "record" : {
     "properties" : {
       "doc" : {

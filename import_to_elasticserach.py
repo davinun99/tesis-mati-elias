@@ -37,9 +37,9 @@ ELASTICSEARCH_DSL_HOST = '{0}:{1}/'.format(settings.ELASTICSEARCH_SERVER_IP, set
 ELASTICSEARCH_USERNAME = settings.ELASTICSEARCH_USERNAME
 ELASTICSEARCH_PASS = settings.ELASTICSEARCH_PASS
 
-EDCA_INDEX = 'edca'
-CONTRACT_INDEX = 'contract' 
-TRANSACTION_INDEX = 'transaction'
+OCDS_INDEX = 'ocds'
+CONTRACT_INDEX = 'contracts'
+TRANSACTION_INDEX = 'transactions'
 
 urllib3.disable_warnings()
 
@@ -277,14 +277,14 @@ def import_to_elasticsearch(files, clean, forzarInsercionYear, forzarInsercionRe
 	if clean is not None:
 		if clean:
 			print("Eliminando indices de ES desde python")
-			result = es.indices.delete(index=EDCA_INDEX, ignore=[404])
+			result = es.indices.delete(index=OCDS_INDEX, ignore=[404])
 			pprint(result)
 			result = es.indices.delete(index=CONTRACT_INDEX, ignore=[404])
 			pprint(result)
 			result = es.indices.delete(index=TRANSACTION_INDEX, ignore=[404])
 			pprint(result)
 
-	result = es.indices.create(index=EDCA_INDEX, body={"mappings": mapeo_es.edca_mapping, "settings": mapeo_es.settings}, ignore=[400])
+	result = es.indices.create(index=OCDS_INDEX, body={"mappings": mapeo_es.ocds_mapping, "settings": mapeo_es.settings}, ignore=[400])
 
 	if 'error' in result and result['error']['reason'] == 'index EDCA already exists':
 		print('Updating existing index')
@@ -529,7 +529,7 @@ def import_to_elasticsearch(files, clean, forzarInsercionYear, forzarInsercionRe
 
 									document = {}
 									document['_id'] = row[numeroColumnaOCID]
-									document['_index'] = EDCA_INDEX
+									document['_index'] = OCDS_INDEX
 									document['_type'] = 'record'
 									document['doc'] = record
 									document['extra'] = extra_fields_records(record, row[numeroColumnaHASH])
@@ -608,7 +608,7 @@ def recordExists(ocid, md5):
 
 	try:
 		es = elasticsearch.Elasticsearch(ELASTICSEARCH_DSL_HOST, max_retries=10, retry_on_timeout=True, http_auth=(ELASTICSEARCH_USERNAME, ELASTICSEARCH_PASS))
-		res = es.get(index="edca", doc_type='record', id=ocid, _source=campos)
+		res = es.get(index=OCDS_INDEX, doc_type='record', id=ocid, _source=campos)
 
 		esMD5 = res['_source']['extra']['hash_md5']
 
@@ -632,17 +632,17 @@ def eliminarDocumentoES(ocid):
 	try:
 		es = elasticsearch.Elasticsearch(ELASTICSEARCH_DSL_HOST, max_retries=10, retry_on_timeout=True, http_auth=(ELASTICSEARCH_USERNAME, ELASTICSEARCH_PASS))
 
-		if es.indices.exists(index="contract"):
+		if es.indices.exists(index=CONTRACT_INDEX):
 			res = es.delete_by_query(
-				index="contract",
+				index=CONTRACT_INDEX,
 				body=query
 			)
 
 		query = {'query': {'term':{'extra.ocid.keyword':ocid}}}
 
-		if es.indices.exists(index="transaction"):
+		if es.indices.exists(index=TRANSACTION_INDEX):
 			res = es.delete_by_query(
-				index="transaction",
+				index=TRANSACTION_INDEX,
 				body=query
 			)
 	except Exception as e:
@@ -882,7 +882,7 @@ def pruebas(files):
 				# 			print("ok year")
 				# 			document = {}
 				# 			document['_id'] = str(uuid.uuid4())
-				# 			document['_index'] = EDCA_INDEX
+				# 			document['_index'] = OCDS_INDEX
 				# 			document['_type'] = 'record'
 				# 			document['doc'] = record
 				# 			document['extra'] = extra_fields(record)
