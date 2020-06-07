@@ -1,2 +1,6 @@
 /.idea/
 /venv/
+__pycache__
+.ve
+/.ve/
+./ve
