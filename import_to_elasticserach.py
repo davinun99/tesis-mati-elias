@@ -173,11 +173,11 @@ def generarRecordCSV(year):
 	Agrega campos adicionales al record, precalculos de timepos y conversion de montos.
 """
 def extra_fields_records(ijson, md5):
-	separador = ' - '
+	# separador = ' - '
 	extra = {}
 
-	buyerFullName = ijson["compiledRelease"]["buyer"]["name"]
-	source = ijson["compiledRelease"]["sources"][0]["id"]
+	# buyerFullName = ijson["compiledRelease"]["buyer"]["name"]
+	# source = ijson["compiledRelease"]["sources"][0]["id"]
 
 	compiledRelease = ijson["compiledRelease"]
 
@@ -286,17 +286,17 @@ def import_to_elasticsearch(files, clean, forzarInsercionYear, forzarInsercionRe
 
 	result = es.indices.create(index=OCDS_INDEX, body={"mappings": mapeo_es.ocds_mapping, "settings": mapeo_es.settings}, ignore=[400])
 
-	if 'error' in result and result['error']['reason'] == 'index EDCA already exists':
+	if 'error' in result and result['error']['reason'] == 'index ocds already exists':
 		print('Updating existing index')
 
 	result = es.indices.create(index=CONTRACT_INDEX, body={"mappings": mapeo_es.contract_mapping, "settings": mapeo_es.settings}, ignore=[400])
 
-	if 'error' in result and result['error']['reason'] == 'index contract already exists':
+	if 'error' in result and result['error']['reason'] == 'index contracts already exists':
 		print('Updating existing index')
 
 	result = es.indices.create(index=TRANSACTION_INDEX, body={"mappings": mapeo_es.transaction_mapping, "settings": mapeo_es.settings}, ignore=[400])
 
-	if 'error' in result and result['error']['reason'] == 'index transaction already exists':
+	if 'error' in result and result['error']['reason'] == 'index transactions already exists':
 		print('Updating existing index')
 
 
@@ -394,25 +394,28 @@ def import_to_elasticsearch(files, clean, forzarInsercionYear, forzarInsercionRe
 		extra['parentTop'] = parentTop
 
 		if 'contracts' in compiledRelease:
-			extra["sumTransactions"] = 0
-			for c in compiledRelease["contracts"]:
-				if 'implementation' in c:
-					if 'transactions' in c["implementation"]:
-						transactionLastDate = None
-						for t in c["implementation"]["transactions"]:
-							extra["sumTransactions"] += t["value"]["amount"]
+			try:
+				extra["sumTransactions"] = 0
+				for c in compiledRelease["contracts"]:
+					if 'implementation' in c:
+						if 'transactions' in c["implementation"]:
+							transactionLastDate = None
+							for t in c["implementation"]["transactions"]:
+								extra["sumTransactions"] += t["value"].get('amount', 0)
 
-							if transactionLastDate is None: 
-								transactionLastDate = t["date"]
-							else:
-								if t["date"] > transactionLastDate:
-									transactionLastDate = t["date"]	
+								if transactionLastDate is None:
+									transactionLastDate = t["date"]
+								else:
+									if t["date"] > transactionLastDate:
+										transactionLastDate = t["date"]
 
-							extra["transactionLastDate"] = transactionLastDate
+								extra["transactionLastDate"] = transactionLastDate
+			except KeyError:
+				print('KeyError handling')
 
 		extra['fuentes'] = []
 		extra['objetosGasto'] = []
-		extra['fuentesONCAE'] = []
+		# extra['fuentesONCAE'] = []
 
 		# planning/budget/budgetBreakdown/0/sourceParty/name
 
@@ -425,9 +428,9 @@ def import_to_elasticsearch(files, clean, forzarInsercionYear, forzarInsercionRe
 								extra['fuentes'].append(b['classifications']['fuente'])
 								extra['objetosGasto'].append(b['classifications']['objeto'])
 
-						if 'sourceParty' in b:
-							if 'name' in b['sourceParty']:
-								extra['fuentesONCAE'].append(b['sourceParty']['name'])
+						# if 'sourceParty' in b:
+							# if 'name' in b['sourceParty']:
+							# 	extra['fuentesONCAE'].append(b['sourceParty']['name'])
 
 		for c in compiledRelease["contracts"]:
 			if 'tender' in compiledRelease and 'dateSigned' in c:
@@ -439,7 +442,7 @@ def import_to_elasticsearch(files, clean, forzarInsercionYear, forzarInsercionRe
 				if 'amount' in c['value']:
 
 					monedaLocal = {}
-					monedaLocal["currency"] = 'HNL'
+					monedaLocal["currency"] = 'PYG'
 
 					if 'dateSigned' in c:
 						date = c['dateSigned']
@@ -461,7 +464,7 @@ def import_to_elasticsearch(files, clean, forzarInsercionYear, forzarInsercionRe
 								monedaLocal["currency"] = c['value']['currency']
 								monedaLocal["exchangeRate"] = 1
 
-						if c['value']['currency'] == 'HNL':
+						if c['value']['currency'] == 'PYG':
 							monedaLocal["amount"] = c['value']['amount']
 							monedaLocal["exchangeRate"] = 1
 					else:
@@ -554,7 +557,7 @@ def import_to_elasticsearch(files, clean, forzarInsercionYear, forzarInsercionRe
 	print("Por procesar:", years)
 
 	for year in years:
-		result = elasticsearch.helpers.bulk(es, generador(year), raise_on_error=False, request_timeout=30)
+		result = elasticsearch.helpers.bulk(es, generador(year), raise_on_error=False, request_timeout=3000)
 		print("records procesados", result)
 
 """
@@ -778,7 +781,7 @@ def tazasDeCambio():
 	return tc
 
 """
-	Conversor de montos de USD a HNL.
+	Conversor de montos de USD a PYG.
 """
 def convertirMoneda(dfTazasDeCambio, anio, mes, monto):
 	tc = None
@@ -908,7 +911,7 @@ def main():
 	#Ejecutar comandos aqui
 	generarRecordHashCSV() # Gerando archivo hash de records hashs.
 	archivoRecordsHash = 'archivos_estaticos/records_hash_year.csv'
-	import_to_elasticsearch([archivoRecordsHash,], False, False, False)
+	import_to_elasticsearch([archivoRecordsHash], True, False, False)
 	
 	# archivoRecords = 'archivos_estaticos/records.csv'
 	# pruebas([archivoRecords,])
