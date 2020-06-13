@@ -87,7 +87,7 @@ def generarRecordHashCSV():
 
 		cur = con.cursor()
 
-		with open(archivoSalida, 'w') as f_output:
+		with open(archivoSalida, 'w', encoding='utf-8') as f_output:
 			cur.copy_expert(query, f_output)
 
 		f_output.close()
@@ -152,7 +152,7 @@ def generarRecordCSV(year):
 
 		cur = con.cursor()
 
-		with open(archivoSalida, 'w') as f_output:
+		with open(archivoSalida, 'w', encoding='utf-8') as f_output:
 			cur.copy_expert(query, f_output)
 
 		f_output.close()
@@ -507,7 +507,7 @@ def import_to_elasticsearch(files, clean, forzarInsercionYear, forzarInsercionRe
 			generarRecordCSV(file_year)
 
 			csv.field_size_limit(sys.maxsize)
-			with open(file_name) as fp:
+			with open(file_name, encoding='utf-8') as fp:
 
 				reader = csv.reader(fp, delimiter='|')
 
@@ -579,7 +579,7 @@ def limpiarArchivos(directorio):
 	listaArchivos = [ f for f in os.listdir(directorio) if f.endswith(".txt") ]
 
 	for a in listaArchivos:
-		open(directorio + a, 'w').close()
+		open(directorio + a, 'w', encoding='utf-8').close()
 
 """
 	Crear un directorio, solo si no existe
@@ -594,7 +594,7 @@ def crearDirectorio(directorio):
 	Escribe en un archivo de texto/
 """
 def escribirArchivo(directorio, nombre, texto, modo='a'):
-	archivoSalida = codecs.open(directorio + nombre, modo, 'utf-8')
+	archivoSalida = codecs.open(directorio + nombre, modo, encoding='utf-8')
 	archivoSalida.write(texto)
 	archivoSalida.write('\n')
 	archivoSalida.close()
@@ -669,7 +669,7 @@ def detectarAniosPorProcesar(archivo):
 
 	# Generando archivos md5
 	csv.field_size_limit(sys.maxsize)
-	with open(archivo) as fp:
+	with open(archivo, encoding='utf-8') as fp:
 
 		reader = csv.reader(fp, delimiter='|')
 
@@ -697,7 +697,7 @@ def detectarAniosPorProcesar(archivo):
 	archivoJson = directorioRecordsHash + 'year.json'
 
 	try:
-		with open(archivoJson) as json_file:
+		with open(archivoJson, encoding='utf-8') as json_file:
 			years = json.load(json_file)
 	except Exception as e:
 		years = {}
@@ -740,7 +740,7 @@ def actualizarArchivoProcesado(year, contador):
 	archivoJson = directorioRecordsHash + 'year.json'
 
 	try:
-		with open(archivoJson) as json_file:
+		with open(archivoJson, encoding='utf-8') as json_file:
 			files_hash = json.load(json_file)
 
 			if year in files_hash:
@@ -807,98 +807,6 @@ def convertirMoneda(dfTazasDeCambio, anio, mes, monto):
 """
 	Funcion para realizar pruebas, puede ser eliminada en cualquier momento.
 """
-def pruebas(files):
-	print('probando')
-	contador = 0
-	years = ['2017', '2018', '2019']
-
-	# generarRecordCSV('2018')
-
-	# tz = tazasDeCambio()
-
-	# print(tz.head())
-	# print(tz[['MES',2018]])
-
-	# generarRecordHashCSV()
-	# years = detectarAniosPorProcesar('archivos_estaticos/records_hash_year.csv')
-	# print(years)
-	# archivoRecordsHash = 'archivos_estaticos/records_hash_year.csv'
-	# import_to_elasticsearch([archivoRecordsHash,], False, False, False)
-
-	# numeroColumnaOCID = 0
-	# numeroColumnaHASH = 1
-	# numeroColumnaRecord = 2
-
-	# tc = tazasDeCambio()
-
-	# eliminarDocumentoES('ocds-lcuori-7GXa9R-CMA-UDH-142-2018-1')
-	# recordExists('ocds-lcuori-MLQmwL-CM-047-2018-1', '1')
-
-	# for file_name in files:
-
-	# 	csv.field_size_limit(sys.maxsize)
-	# 	with open(file_name) as fp:
-
-	# 		reader = csv.reader(fp, delimiter='|')
-
-	# 		for row in reader:
-	# 			contador += 1
-
-	# 		print("Registros", contador)
-				# record = json.loads(row[numeroColumnaRecord])
-
-				# if contador == 206001:
-					# print("OCID 206001", row[numeroColumnaOCID])
-					# exit(0)
-				# if 'compiledRelease' in record:
-				# # 	print("Si compiledRelease")
-				# 	if 'date' in record["compiledRelease"]:
-				# 		year = record['compiledRelease']["date"][0:4]
-				# 		month = record['compiledRelease']["date"][5:7]
-
-				# 		try:
-				# 			monthRow = int(month) - 1 #promedio del mes, en las filas comienza enero es 0, febrero es 1 por eso se resta 1.
-				# 			yearColumn = int(year)
-				# 		except Exception as e:
-				# 			now = datetime.datetime.now()
-				# 			monthRow = 12 #Promedio anual
-				# 			yearColumn = now.year #promedio del año acual.
-
-				# 		if 'contracts' in record["compiledRelease"]:
-				# 			for c in record["compiledRelease"]["contracts"]:
-				# 				if 'value' in c:
-				# 					if 'amount' in c['value']:
-				# 						cambio = tc.loc[monthRow, yearColumn] * c['value']['amount']
-										
-				# 						print("year", year)
-				# 						print("month", month, 'int:month', int(month))
-				# 						print("date", record['compiledRelease']["date"])
-				# 						print("monto del contrato:", c['value']['amount'])
-				# 						print("tc", convertirMoneda(tc, year, month, c['value']['amount']))
-				# 						print("valor HNL", cambio)
-
-				# 		if contador > 5:
-				# 			exit(0)
-
-				# 		print("ok date")
-				# 		if year:
-				# 			print("ok year")
-				# 			document = {}
-				# 			document['_id'] = str(uuid.uuid4())
-				# 			document['_index'] = OCDS_INDEX
-				# 			document['_type'] = 'record'
-				# 			document['doc'] = record
-				# 			document['extra'] = extra_fields(record)
-
-				# 			print("ok documento", contador)
-
-				# 			# yield document
-				# 		else:
-				# 			pass
-				# 	else:
-				# 		print("No date")
-				# else:
-				# 	print("No compiledRelease")
 
 """
 	Funcion principal, ejecuta las funciones para el proceso de importacion de PostgresSQL (PG) a ElasticSearch(ES).

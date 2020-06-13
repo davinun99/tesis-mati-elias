@@ -57,7 +57,7 @@ ocds_mapping = {
                     "fields" : {
                       "keyword" : {
                         "type" : "keyword",
-                        "ignore_above" : 256
+                        "ignore_above" : 1024
                       }
                     }
                   },
@@ -71,7 +71,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -80,19 +80,19 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
                       "id" : {
-                        "type" : "long"
+                        "type" : "text"
                       },
                       "title" : {
                         "type" : "text",
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -101,7 +101,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       }
@@ -119,7 +119,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -128,7 +128,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -137,7 +137,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           }
@@ -148,7 +148,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -157,7 +157,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -171,7 +171,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -193,7 +193,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -202,7 +202,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       }
@@ -213,7 +213,7 @@ ocds_mapping = {
                     "fields" : {
                       "keyword" : {
                         "type" : "keyword",
-                        "ignore_above" : 256
+                        "ignore_above" : 1024
                       }
                     }
                   },
@@ -227,7 +227,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       }
@@ -242,7 +242,7 @@ ocds_mapping = {
                     "fields" : {
                       "keyword" : {
                         "type" : "keyword",
-                        "ignore_above" : 256
+                        "ignore_above" : 1024
                       }
                     }
                   },
@@ -253,7 +253,7 @@ ocds_mapping = {
 					"fields" : {
 						"keyword" : {
 							"type" : "keyword",
-							"ignore_above" : 256
+							"ignore_above" : 1024
 						}
 					}
 	              }
@@ -269,7 +269,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -281,7 +281,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -290,7 +290,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -299,7 +299,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -308,7 +308,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       }
@@ -317,6 +317,9 @@ ocds_mapping = {
                   "awardID" : {
                     "type" : "text"
                   },
+                  "dncpContractCode": {
+                    "type": "text"
+                  },
                   "buyer" : {
                     "properties" : {
                       "id" : {
@@ -324,7 +327,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -333,7 +336,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       }
@@ -347,7 +350,7 @@ ocds_mapping = {
                     "fields" : {
                       "keyword" : {
                         "type" : "keyword",
-                        "ignore_above" : 256
+                        "ignore_above" : 1024
                       }
                     }
                   },
@@ -364,7 +367,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -373,7 +376,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -382,7 +385,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -391,7 +394,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -400,7 +403,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       }
@@ -423,7 +426,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -432,7 +435,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -443,7 +446,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -452,7 +455,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           }
@@ -463,7 +466,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -477,7 +480,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           }
@@ -490,7 +493,7 @@ ocds_mapping = {
                     "fields" : {
                       "keyword" : {
                         "type" : "keyword",
-                        "ignore_above" : 256
+                        "ignore_above" : 1024
                       }
                     }
                   },
@@ -513,7 +516,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   }
@@ -527,7 +530,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -536,7 +539,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -545,7 +548,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               }
@@ -556,7 +559,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -565,7 +568,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -581,7 +584,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   }
@@ -592,7 +595,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               }
@@ -607,7 +610,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -619,7 +622,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -628,7 +631,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -639,7 +642,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -648,7 +651,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               }
@@ -661,7 +664,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -670,7 +673,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               }
@@ -681,7 +684,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -695,7 +698,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               }
@@ -714,7 +717,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -723,7 +726,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -732,7 +735,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           }
@@ -743,7 +746,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -760,7 +763,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -774,7 +777,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               }
@@ -799,7 +802,7 @@ ocds_mapping = {
                     "fields" : {
                       "keyword" : {
                         "type" : "keyword",
-                        "ignore_above" : 256
+                        "ignore_above" : 1024
                       }
                     }
                   },
@@ -812,7 +815,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -821,7 +824,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       }
@@ -832,7 +835,7 @@ ocds_mapping = {
                     "fields" : {
                       "keyword" : {
                         "type" : "keyword",
-                        "ignore_above" : 256
+                        "ignore_above" : 1024
                       }
                     }
                   },
@@ -846,7 +849,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       }
@@ -862,7 +865,7 @@ ocds_mapping = {
                 "fields" : {
                   "keyword" : {
                     "type" : "keyword",
-                    "ignore_above" : 256
+                    "ignore_above" : 1024
                   }
                 }
               },
@@ -871,7 +874,7 @@ ocds_mapping = {
                 "fields" : {
                   "keyword" : {
                     "type" : "keyword",
-                    "ignore_above" : 256
+                    "ignore_above" : 1024
                   }
                 }
               },
@@ -880,7 +883,7 @@ ocds_mapping = {
                 "fields" : {
                   "keyword" : {
                     "type" : "keyword",
-                    "ignore_above" : 256
+                    "ignore_above" : 1024
                   }
                 }
               },
@@ -889,7 +892,7 @@ ocds_mapping = {
                 "fields" : {
                   "keyword" : {
                     "type" : "keyword",
-                    "ignore_above" : 256
+                    "ignore_above" : 1024
                   }
                 }
               },
@@ -903,7 +906,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -912,7 +915,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -921,7 +924,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -930,7 +933,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -939,7 +942,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       }
@@ -952,7 +955,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -961,7 +964,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -970,7 +973,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -979,7 +982,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -988,7 +991,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       }
@@ -999,7 +1002,7 @@ ocds_mapping = {
                     "fields" : {
                       "keyword" : {
                         "type" : "keyword",
-                        "ignore_above" : 256
+                        "ignore_above" : 1024
                       }
                     }
                   },
@@ -1010,7 +1013,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -1019,7 +1022,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -1028,7 +1031,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -1037,7 +1040,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       }
@@ -1050,7 +1053,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -1059,7 +1062,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       }
@@ -1070,7 +1073,7 @@ ocds_mapping = {
                     "fields" : {
                       "keyword" : {
                         "type" : "keyword",
-                        "ignore_above" : 256
+                        "ignore_above" : 1024
                       }
                     }
                   },
@@ -1079,7 +1082,7 @@ ocds_mapping = {
                     "fields" : {
                       "keyword" : {
                         "type" : "keyword",
-                        "ignore_above" : 256
+                        "ignore_above" : 1024
                       }
                     }
                   }
@@ -1099,7 +1102,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           }
@@ -1117,7 +1120,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               }
@@ -1130,7 +1133,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -1139,7 +1142,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -1148,7 +1151,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -1157,7 +1160,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -1166,7 +1169,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -1175,7 +1178,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -1184,7 +1187,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -1193,7 +1196,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -1202,7 +1205,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -1211,7 +1214,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -1220,7 +1223,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -1229,7 +1232,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               }
@@ -1240,7 +1243,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -1249,7 +1252,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -1276,7 +1279,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -1285,7 +1288,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               }
@@ -1298,7 +1301,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       }
@@ -1309,7 +1312,7 @@ ocds_mapping = {
                     "fields" : {
                       "keyword" : {
                         "type" : "keyword",
-                        "ignore_above" : 256
+                        "ignore_above" : 1024
                       }
                     }
                   }
@@ -1322,7 +1325,7 @@ ocds_mapping = {
                     "fields" : {
                       "keyword" : {
                         "type" : "keyword",
-                        "ignore_above" : 256
+                        "ignore_above" : 1024
                       }
                     }
                   }
@@ -1335,7 +1338,7 @@ ocds_mapping = {
                     "fields" : {
                       "keyword" : {
                         "type" : "keyword",
-                        "ignore_above" : 256
+                        "ignore_above" : 1024
                       }
                     }
                   },
@@ -1344,7 +1347,7 @@ ocds_mapping = {
                     "fields" : {
                       "keyword" : {
                         "type" : "keyword",
-                        "ignore_above" : 256
+                        "ignore_above" : 1024
                       }
                     }
                   },
@@ -1353,7 +1356,7 @@ ocds_mapping = {
                     "fields" : {
                       "keyword" : {
                         "type" : "keyword",
-                        "ignore_above" : 256
+                        "ignore_above" : 1024
                       }
                     }
                   }
@@ -1364,7 +1367,7 @@ ocds_mapping = {
                 "fields" : {
                   "keyword" : {
                     "type" : "keyword",
-                    "ignore_above" : 256
+                    "ignore_above" : 1024
                   }
                 }
               },
@@ -1375,7 +1378,7 @@ ocds_mapping = {
                     "fields" : {
                       "keyword" : {
                         "type" : "keyword",
-                        "ignore_above" : 256
+                        "ignore_above" : 1024
                       }
                     }
                   },
@@ -1384,7 +1387,7 @@ ocds_mapping = {
                     "fields" : {
                       "keyword" : {
                         "type" : "keyword",
-                        "ignore_above" : 256
+                        "ignore_above" : 1024
                       }
                     }
                   },
@@ -1398,7 +1401,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -1407,19 +1410,19 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
                       "id" : {
-                        "type" : "long"
+                        "type" : "text"
                       },
                       "title" : {
                         "type" : "text",
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -1428,7 +1431,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       }
@@ -1449,7 +1452,7 @@ ocds_mapping = {
                     "fields" : {
                       "keyword" : {
                         "type" : "keyword",
-                        "ignore_above" : 256
+                        "ignore_above" : 1024
                       }
                     }
                   },
@@ -1462,7 +1465,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -1471,7 +1474,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -1480,7 +1483,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           }
@@ -1491,7 +1494,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -1500,7 +1503,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -1514,7 +1517,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           }
@@ -1527,7 +1530,7 @@ ocds_mapping = {
                     "fields" : {
                       "keyword" : {
                         "type" : "keyword",
-                        "ignore_above" : 256
+                        "ignore_above" : 1024
                       }
                     }
                   },
@@ -1538,7 +1541,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -1547,7 +1550,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -1565,7 +1568,7 @@ ocds_mapping = {
                     "fields" : {
                       "keyword" : {
                         "type" : "keyword",
-                        "ignore_above" : 256
+                        "ignore_above" : 1024
                       }
                     }
                   },
@@ -1576,7 +1579,7 @@ ocds_mapping = {
 					"fields" : {
 						"keyword" : {
 							"type" : "keyword",
-							"ignore_above" : 256
+							"ignore_above" : 1024
 						}
 					}	
                   },
@@ -1587,7 +1590,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -1596,7 +1599,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       }
@@ -1607,7 +1610,7 @@ ocds_mapping = {
                     "fields" : {
                       "keyword" : {
                         "type" : "keyword",
-                        "ignore_above" : 256
+                        "ignore_above" : 1024
                       }
                     }
                   },
@@ -1628,7 +1631,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -1637,7 +1640,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       }
@@ -1650,7 +1653,7 @@ ocds_mapping = {
 					"fields" : {
 						"keyword" : {
 							"type" : "keyword",
-							"ignore_above" : 256
+							"ignore_above" : 1024
 						}
 					}	
                   }
@@ -1665,7 +1668,7 @@ ocds_mapping = {
 			"fields" : {
 				"keyword" : {
 					"type" : "keyword",
-					"ignore_above" : 256
+					"ignore_above" : 1024
 				}
 			}	
           },
@@ -1678,7 +1681,7 @@ ocds_mapping = {
                     "fields" : {
                       "keyword" : {
                         "type" : "keyword",
-                        "ignore_above" : 256
+                        "ignore_above" : 1024
                       }
                     }
                   },
@@ -1692,7 +1695,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -1701,19 +1704,19 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
                       "id" : {
-                        "type" : "long"
+                        "type" : "text"
                       },
                       "title" : {
                         "type" : "text",
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -1722,7 +1725,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       }
@@ -1740,7 +1743,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -1749,7 +1752,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -1758,7 +1761,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           }
@@ -1769,7 +1772,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -1778,7 +1781,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -1792,7 +1795,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -1814,7 +1817,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -1823,7 +1826,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       }
@@ -1834,7 +1837,7 @@ ocds_mapping = {
                     "fields" : {
                       "keyword" : {
                         "type" : "keyword",
-                        "ignore_above" : 256
+                        "ignore_above" : 1024
                       }
                     }
                   },
@@ -1848,7 +1851,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       }
@@ -1863,7 +1866,7 @@ ocds_mapping = {
                     "fields" : {
                       "keyword" : {
                         "type" : "keyword",
-                        "ignore_above" : 256
+                        "ignore_above" : 1024
                       }
                     }
                   },
@@ -1872,7 +1875,7 @@ ocds_mapping = {
                     "fields" : {
                       "keyword" : {
                         "type" : "keyword",
-                        "ignore_above" : 256
+                        "ignore_above" : 1024
                       }
                     }
                   }
@@ -1887,7 +1890,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -1899,7 +1902,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -1908,7 +1911,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -1917,7 +1920,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -1926,7 +1929,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       }
@@ -1942,7 +1945,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -1951,7 +1954,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       }
@@ -1965,7 +1968,7 @@ ocds_mapping = {
                     "fields" : {
                       "keyword" : {
                         "type" : "keyword",
-                        "ignore_above" : 256
+                        "ignore_above" : 1024
                       }
                     }
                   },
@@ -1982,7 +1985,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -1991,7 +1994,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -2000,7 +2003,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -2009,7 +2012,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -2018,7 +2021,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       }
@@ -2041,7 +2044,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -2050,7 +2053,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -2061,7 +2064,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -2070,7 +2073,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           }
@@ -2081,7 +2084,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -2095,7 +2098,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           }
@@ -2125,7 +2128,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   }
@@ -2139,7 +2142,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -2148,7 +2151,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -2157,7 +2160,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               }
@@ -2168,7 +2171,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -2177,7 +2180,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -2193,7 +2196,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   }
@@ -2204,7 +2207,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               }
@@ -2219,7 +2222,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -2231,7 +2234,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -2240,7 +2243,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -2251,7 +2254,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -2260,7 +2263,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               }
@@ -2273,7 +2276,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -2282,7 +2285,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               }
@@ -2293,7 +2296,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -2307,7 +2310,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               }
@@ -2326,7 +2329,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -2335,7 +2338,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -2344,7 +2347,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           }
@@ -2355,7 +2358,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -2372,7 +2375,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -2386,7 +2389,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               }
@@ -2411,7 +2414,7 @@ ocds_mapping = {
                     "fields" : {
                       "keyword" : {
                         "type" : "keyword",
-                        "ignore_above" : 256
+                        "ignore_above" : 1024
                       }
                     }
                   },
@@ -2422,7 +2425,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -2431,7 +2434,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       }
@@ -2442,7 +2445,7 @@ ocds_mapping = {
                     "fields" : {
                       "keyword" : {
                         "type" : "keyword",
-                        "ignore_above" : 256
+                        "ignore_above" : 1024
                       }
                     }
                   },
@@ -2456,7 +2459,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       }
@@ -2472,7 +2475,7 @@ ocds_mapping = {
                 "fields" : {
                   "keyword" : {
                     "type" : "keyword",
-                    "ignore_above" : 256
+                    "ignore_above" : 1024
                   }
                 }
               },
@@ -2481,7 +2484,7 @@ ocds_mapping = {
                 "fields" : {
                   "keyword" : {
                     "type" : "keyword",
-                    "ignore_above" : 256
+                    "ignore_above" : 1024
                   }
                 }
               },
@@ -2490,7 +2493,7 @@ ocds_mapping = {
                 "fields" : {
                   "keyword" : {
                     "type" : "keyword",
-                    "ignore_above" : 256
+                    "ignore_above" : 1024
                   }
                 }
               },
@@ -2499,7 +2502,7 @@ ocds_mapping = {
                 "fields" : {
                   "keyword" : {
                     "type" : "keyword",
-                    "ignore_above" : 256
+                    "ignore_above" : 1024
                   }
                 }
               },
@@ -2512,7 +2515,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -2521,7 +2524,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -2530,7 +2533,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -2539,7 +2542,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -2548,7 +2551,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       }
@@ -2561,7 +2564,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -2570,7 +2573,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -2579,7 +2582,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -2588,7 +2591,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -2597,7 +2600,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       }
@@ -2608,7 +2611,7 @@ ocds_mapping = {
                     "fields" : {
                       "keyword" : {
                         "type" : "keyword",
-                        "ignore_above" : 256
+                        "ignore_above" : 1024
                       }
                     }
                   },
@@ -2619,7 +2622,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -2628,7 +2631,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -2637,7 +2640,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -2646,7 +2649,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       }
@@ -2659,7 +2662,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -2668,7 +2671,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       }
@@ -2679,7 +2682,7 @@ ocds_mapping = {
                     "fields" : {
                       "keyword" : {
                         "type" : "keyword",
-                        "ignore_above" : 256
+                        "ignore_above" : 1024
                       }
                     }
                   },
@@ -2688,7 +2691,7 @@ ocds_mapping = {
                     "fields" : {
                       "keyword" : {
                         "type" : "keyword",
-                        "ignore_above" : 256
+                        "ignore_above" : 1024
                       }
                     }
                   }
@@ -2708,7 +2711,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           }
@@ -2726,7 +2729,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               }
@@ -2739,7 +2742,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -2748,7 +2751,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -2757,7 +2760,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -2766,7 +2769,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -2775,7 +2778,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -2784,7 +2787,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -2793,7 +2796,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -2802,7 +2805,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -2811,7 +2814,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -2820,7 +2823,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -2829,7 +2832,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -2838,7 +2841,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               }
@@ -2849,7 +2852,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -2858,7 +2861,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -2885,7 +2888,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -2894,7 +2897,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               }
@@ -2907,7 +2910,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       }
@@ -2918,7 +2921,7 @@ ocds_mapping = {
                     "fields" : {
                       "keyword" : {
                         "type" : "keyword",
-                        "ignore_above" : 256
+                        "ignore_above" : 1024
                       }
                     }
                   }
@@ -2931,7 +2934,7 @@ ocds_mapping = {
                     "fields" : {
                       "keyword" : {
                         "type" : "keyword",
-                        "ignore_above" : 256
+                        "ignore_above" : 1024
                       }
                     }
                   }
@@ -2944,7 +2947,7 @@ ocds_mapping = {
                     "fields" : {
                       "keyword" : {
                         "type" : "keyword",
-                        "ignore_above" : 256
+                        "ignore_above" : 1024
                       }
                     }
                   },
@@ -2953,7 +2956,7 @@ ocds_mapping = {
                     "fields" : {
                       "keyword" : {
                         "type" : "keyword",
-                        "ignore_above" : 256
+                        "ignore_above" : 1024
                       }
                     }
                   },
@@ -2962,7 +2965,7 @@ ocds_mapping = {
                     "fields" : {
                       "keyword" : {
                         "type" : "keyword",
-                        "ignore_above" : 256
+                        "ignore_above" : 1024
                       }
                     }
                   }
@@ -2973,7 +2976,7 @@ ocds_mapping = {
                 "fields" : {
                   "keyword" : {
                     "type" : "keyword",
-                    "ignore_above" : 256
+                    "ignore_above" : 1024
                   }
                 }
               },
@@ -2984,7 +2987,7 @@ ocds_mapping = {
                     "fields" : {
                       "keyword" : {
                         "type" : "keyword",
-                        "ignore_above" : 256
+                        "ignore_above" : 1024
                       }
                     }
                   },
@@ -2993,7 +2996,7 @@ ocds_mapping = {
                     "fields" : {
                       "keyword" : {
                         "type" : "keyword",
-                        "ignore_above" : 256
+                        "ignore_above" : 1024
                       }
                     }
                   },
@@ -3007,7 +3010,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -3016,19 +3019,19 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
                       "id" : {
-                        "type" : "long"
+                        "type" : "text"
                       },
                       "title" : {
                         "type" : "text",
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -3037,7 +3040,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       }
@@ -3058,7 +3061,7 @@ ocds_mapping = {
                     "fields" : {
                       "keyword" : {
                         "type" : "keyword",
-                        "ignore_above" : 256
+                        "ignore_above" : 1024
                       }
                     }
                   },
@@ -3071,7 +3074,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -3080,7 +3083,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -3089,7 +3092,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           }
@@ -3100,7 +3103,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -3109,7 +3112,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -3123,7 +3126,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           }
@@ -3136,7 +3139,7 @@ ocds_mapping = {
                     "fields" : {
                       "keyword" : {
                         "type" : "keyword",
-                        "ignore_above" : 256
+                        "ignore_above" : 1024
                       }
                     }
                   },
@@ -3147,7 +3150,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -3156,7 +3159,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -3174,7 +3177,7 @@ ocds_mapping = {
                     "fields" : {
                       "keyword" : {
                         "type" : "keyword",
-                        "ignore_above" : 256
+                        "ignore_above" : 1024
                       }
                     }
                   },
@@ -3183,7 +3186,7 @@ ocds_mapping = {
                     "fields" : {
                       "keyword" : {
                         "type" : "keyword",
-                        "ignore_above" : 256
+                        "ignore_above" : 1024
                       }
                     }
                   },
@@ -3194,7 +3197,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -3203,7 +3206,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       }
@@ -3214,7 +3217,7 @@ ocds_mapping = {
                     "fields" : {
                       "keyword" : {
                         "type" : "keyword",
-                        "ignore_above" : 256
+                        "ignore_above" : 1024
                       }
                     }
                   },
@@ -3235,7 +3238,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -3244,7 +3247,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       }
@@ -3255,7 +3258,7 @@ ocds_mapping = {
                     "fields" : {
                       "keyword" : {
                         "type" : "keyword",
-                        "ignore_above" : 256
+                        "ignore_above" : 1024
                       }
                     }
                   }
@@ -3277,7 +3280,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -3286,7 +3289,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -3295,7 +3298,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       }
@@ -3313,7 +3316,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -3322,7 +3325,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -3341,7 +3344,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -3350,7 +3353,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -3359,7 +3362,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           }
@@ -3375,7 +3378,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -3384,7 +3387,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -3393,14 +3396,14 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           }
                         }
                       },
                       "id" : {
-                        "type" : "long"
+                        "type" : "text"
                       },
                       "title" : {
                         "properties" : {
@@ -3412,7 +3415,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -3421,7 +3424,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -3430,7 +3433,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           }
@@ -3446,7 +3449,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -3455,7 +3458,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -3464,7 +3467,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           }
@@ -3489,7 +3492,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -3498,7 +3501,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -3507,7 +3510,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               }
@@ -3523,7 +3526,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -3532,7 +3535,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -3541,7 +3544,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               }
@@ -3557,7 +3560,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -3566,7 +3569,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -3575,7 +3578,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               }
@@ -3593,7 +3596,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -3602,7 +3605,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -3611,7 +3614,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           }
@@ -3622,7 +3625,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -3636,7 +3639,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -3645,7 +3648,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -3666,7 +3669,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -3675,7 +3678,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -3684,7 +3687,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               }
@@ -3702,7 +3705,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   },
@@ -3711,7 +3714,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   },
@@ -3733,7 +3736,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -3747,7 +3750,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -3756,7 +3759,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -3765,7 +3768,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           }
@@ -3783,7 +3786,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -3792,7 +3795,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -3801,7 +3804,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       }
@@ -3819,7 +3822,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -3828,7 +3831,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -3847,7 +3850,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -3856,7 +3859,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -3865,7 +3868,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           }
@@ -3887,7 +3890,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -3896,7 +3899,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -3905,7 +3908,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       }
@@ -3921,7 +3924,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -3930,7 +3933,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -3939,7 +3942,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       }
@@ -3961,7 +3964,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -3970,7 +3973,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -3979,7 +3982,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           }
@@ -3995,7 +3998,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -4004,7 +4007,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -4023,7 +4026,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -4032,7 +4035,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -4041,7 +4044,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           }
@@ -4052,7 +4055,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -4066,7 +4069,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -4075,7 +4078,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -4084,7 +4087,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           }
@@ -4100,7 +4103,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -4109,7 +4112,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -4118,7 +4121,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           }
@@ -4136,7 +4139,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -4145,7 +4148,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -4166,7 +4169,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -4175,7 +4178,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -4184,7 +4187,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           }
@@ -4200,7 +4203,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -4209,7 +4212,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -4218,7 +4221,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           }
@@ -4236,7 +4239,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -4245,7 +4248,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -4264,7 +4267,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -4273,7 +4276,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -4282,7 +4285,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       }
@@ -4300,7 +4303,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -4309,7 +4312,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -4328,7 +4331,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -4337,7 +4340,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -4356,7 +4359,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -4365,7 +4368,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -4374,7 +4377,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           }
@@ -4390,7 +4393,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -4399,7 +4402,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -4408,7 +4411,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           }
@@ -4419,7 +4422,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -4433,7 +4436,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -4442,7 +4445,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -4451,7 +4454,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           }
@@ -4467,7 +4470,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -4476,7 +4479,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -4485,7 +4488,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           }
@@ -4507,7 +4510,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -4516,7 +4519,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -4535,7 +4538,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -4544,7 +4547,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -4565,7 +4568,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -4574,7 +4577,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -4583,7 +4586,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           }
@@ -4599,7 +4602,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -4608,7 +4611,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -4617,7 +4620,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           }
@@ -4635,7 +4638,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -4644,7 +4647,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -4653,7 +4656,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               }
@@ -4669,7 +4672,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -4678,7 +4681,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -4687,7 +4690,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               }
@@ -4700,7 +4703,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -4716,7 +4719,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -4725,7 +4728,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -4744,7 +4747,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -4753,7 +4756,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -4762,7 +4765,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               }
@@ -4789,7 +4792,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -4798,7 +4801,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -4821,7 +4824,7 @@ ocds_mapping = {
                                         "fields" : {
                                           "keyword" : {
                                             "type" : "keyword",
-                                            "ignore_above" : 256
+                                            "ignore_above" : 1024
                                           }
                                         }
                                       },
@@ -4830,7 +4833,7 @@ ocds_mapping = {
                                         "fields" : {
                                           "keyword" : {
                                             "type" : "keyword",
-                                            "ignore_above" : 256
+                                            "ignore_above" : 1024
                                           }
                                         }
                                       },
@@ -4849,7 +4852,7 @@ ocds_mapping = {
                                         "fields" : {
                                           "keyword" : {
                                             "type" : "keyword",
-                                            "ignore_above" : 256
+                                            "ignore_above" : 1024
                                           }
                                         }
                                       },
@@ -4858,7 +4861,7 @@ ocds_mapping = {
                                         "fields" : {
                                           "keyword" : {
                                             "type" : "keyword",
-                                            "ignore_above" : 256
+                                            "ignore_above" : 1024
                                           }
                                         }
                                       },
@@ -4867,7 +4870,7 @@ ocds_mapping = {
                                         "fields" : {
                                           "keyword" : {
                                             "type" : "keyword",
-                                            "ignore_above" : 256
+                                            "ignore_above" : 1024
                                           }
                                         }
                                       }
@@ -4885,7 +4888,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   },
@@ -4894,7 +4897,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   },
@@ -4913,7 +4916,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   },
@@ -4922,7 +4925,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   },
@@ -4931,7 +4934,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   }
@@ -4947,7 +4950,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   },
@@ -4956,7 +4959,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   },
@@ -4965,7 +4968,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   }
@@ -4981,7 +4984,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   },
@@ -4990,7 +4993,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   },
@@ -4999,7 +5002,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   }
@@ -5017,7 +5020,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -5026,7 +5029,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -5035,7 +5038,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               }
@@ -5046,7 +5049,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -5064,7 +5067,7 @@ ocds_mapping = {
                                         "fields" : {
                                           "keyword" : {
                                             "type" : "keyword",
-                                            "ignore_above" : 256
+                                            "ignore_above" : 1024
                                           }
                                         }
                                       },
@@ -5073,7 +5076,7 @@ ocds_mapping = {
                                         "fields" : {
                                           "keyword" : {
                                             "type" : "keyword",
-                                            "ignore_above" : 256
+                                            "ignore_above" : 1024
                                           }
                                         }
                                       },
@@ -5092,7 +5095,7 @@ ocds_mapping = {
                                         "fields" : {
                                           "keyword" : {
                                             "type" : "keyword",
-                                            "ignore_above" : 256
+                                            "ignore_above" : 1024
                                           }
                                         }
                                       },
@@ -5101,7 +5104,7 @@ ocds_mapping = {
                                         "fields" : {
                                           "keyword" : {
                                             "type" : "keyword",
-                                            "ignore_above" : 256
+                                            "ignore_above" : 1024
                                           }
                                         }
                                       },
@@ -5110,7 +5113,7 @@ ocds_mapping = {
                                         "fields" : {
                                           "keyword" : {
                                             "type" : "keyword",
-                                            "ignore_above" : 256
+                                            "ignore_above" : 1024
                                           }
                                         }
                                       }
@@ -5128,7 +5131,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   },
@@ -5137,7 +5140,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   },
@@ -5146,7 +5149,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   }
@@ -5168,7 +5171,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -5177,7 +5180,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -5186,7 +5189,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               }
@@ -5202,7 +5205,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -5211,7 +5214,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -5230,7 +5233,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -5239,7 +5242,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -5248,7 +5251,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               }
@@ -5259,7 +5262,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -5275,7 +5278,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   },
@@ -5284,7 +5287,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   },
@@ -5293,7 +5296,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   }
@@ -5309,7 +5312,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   },
@@ -5318,7 +5321,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   },
@@ -5327,7 +5330,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   }
@@ -5347,7 +5350,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   },
@@ -5356,7 +5359,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   },
@@ -5365,7 +5368,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   }
@@ -5381,7 +5384,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   },
@@ -5390,7 +5393,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   },
@@ -5399,7 +5402,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   }
@@ -5417,7 +5420,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -5426,7 +5429,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -5435,7 +5438,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               }
@@ -5453,7 +5456,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   },
@@ -5462,7 +5465,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   },
@@ -5481,7 +5484,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   },
@@ -5490,7 +5493,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   },
@@ -5499,7 +5502,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   }
@@ -5525,7 +5528,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -5534,7 +5537,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -5543,7 +5546,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               }
@@ -5559,7 +5562,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -5568,7 +5571,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -5577,7 +5580,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               }
@@ -5593,7 +5596,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -5602,7 +5605,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -5611,7 +5614,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               }
@@ -5629,7 +5632,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -5638,7 +5641,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -5647,7 +5650,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           }
@@ -5666,7 +5669,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -5675,7 +5678,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -5696,7 +5699,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -5705,7 +5708,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -5714,7 +5717,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               }
@@ -5732,7 +5735,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   },
@@ -5741,7 +5744,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   },
@@ -5760,7 +5763,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   },
@@ -5769,7 +5772,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   },
@@ -5778,7 +5781,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   }
@@ -5802,7 +5805,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -5811,7 +5814,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -5830,7 +5833,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -5839,7 +5842,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -5860,7 +5863,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -5869,7 +5872,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -5878,7 +5881,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       }
@@ -5891,7 +5894,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -5905,7 +5908,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -5914,7 +5917,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -5923,7 +5926,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           }
@@ -5941,7 +5944,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -5950,7 +5953,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -5959,7 +5962,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       }
@@ -5977,7 +5980,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -5986,7 +5989,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -6005,7 +6008,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -6014,7 +6017,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -6023,7 +6026,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           }
@@ -6043,7 +6046,7 @@ ocds_mapping = {
                     "fields" : {
                       "keyword" : {
                         "type" : "keyword",
-                        "ignore_above" : 256
+                        "ignore_above" : 1024
                       }
                     }
                   },
@@ -6052,7 +6055,7 @@ ocds_mapping = {
                     "fields" : {
                       "keyword" : {
                         "type" : "keyword",
-                        "ignore_above" : 256
+                        "ignore_above" : 1024
                       }
                     }
                   },
@@ -6061,7 +6064,7 @@ ocds_mapping = {
                     "fields" : {
                       "keyword" : {
                         "type" : "keyword",
-                        "ignore_above" : 256
+                        "ignore_above" : 1024
                       }
                     }
                   }
@@ -6077,7 +6080,7 @@ ocds_mapping = {
                     "fields" : {
                       "keyword" : {
                         "type" : "keyword",
-                        "ignore_above" : 256
+                        "ignore_above" : 1024
                       }
                     }
                   },
@@ -6086,7 +6089,7 @@ ocds_mapping = {
                     "fields" : {
                       "keyword" : {
                         "type" : "keyword",
-                        "ignore_above" : 256
+                        "ignore_above" : 1024
                       }
                     }
                   },
@@ -6095,7 +6098,7 @@ ocds_mapping = {
                     "fields" : {
                       "keyword" : {
                         "type" : "keyword",
-                        "ignore_above" : 256
+                        "ignore_above" : 1024
                       }
                     }
                   }
@@ -6106,7 +6109,7 @@ ocds_mapping = {
                 "fields" : {
                   "keyword" : {
                     "type" : "keyword",
-                    "ignore_above" : 256
+                    "ignore_above" : 1024
                   }
                 }
               },
@@ -6124,7 +6127,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -6133,7 +6136,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -6142,7 +6145,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           }
@@ -6158,7 +6161,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -6167,7 +6170,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -6176,7 +6179,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           }
@@ -6192,7 +6195,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -6201,7 +6204,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -6210,7 +6213,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           }
@@ -6226,7 +6229,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -6235,7 +6238,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -6244,7 +6247,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           }
@@ -6258,7 +6261,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -6267,7 +6270,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -6281,7 +6284,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -6290,7 +6293,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -6299,7 +6302,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           }
@@ -6322,7 +6325,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -6331,7 +6334,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -6340,7 +6343,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           }
@@ -6356,7 +6359,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -6365,7 +6368,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -6374,7 +6377,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           }
@@ -6390,7 +6393,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -6399,7 +6402,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -6408,7 +6411,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           }
@@ -6422,7 +6425,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -6431,7 +6434,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -6445,7 +6448,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -6454,7 +6457,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -6463,7 +6466,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           }
@@ -6479,7 +6482,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -6488,7 +6491,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -6497,7 +6500,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           }
@@ -6513,7 +6516,7 @@ ocds_mapping = {
                     "fields" : {
                       "keyword" : {
                         "type" : "keyword",
-                        "ignore_above" : 256
+                        "ignore_above" : 1024
                       }
                     }
                   },
@@ -6529,7 +6532,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -6538,7 +6541,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -6547,7 +6550,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           }
@@ -6563,7 +6566,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -6572,7 +6575,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -6581,7 +6584,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           }
@@ -6597,7 +6600,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -6606,7 +6609,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -6615,7 +6618,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           }
@@ -6631,7 +6634,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -6640,7 +6643,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -6649,7 +6652,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           }
@@ -6664,7 +6667,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -6678,7 +6681,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -6687,7 +6690,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -6696,7 +6699,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           }
@@ -6714,7 +6717,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -6723,7 +6726,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -6732,7 +6735,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       }
@@ -6748,7 +6751,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -6757,7 +6760,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -6766,7 +6769,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       }
@@ -6790,7 +6793,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -6799,7 +6802,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -6818,7 +6821,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -6827,7 +6830,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -6836,7 +6839,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               }
@@ -6858,7 +6861,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   },
@@ -6867,7 +6870,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   },
@@ -6886,7 +6889,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   },
@@ -6895,7 +6898,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   },
@@ -6904,7 +6907,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   }
@@ -6924,7 +6927,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   },
@@ -6933,7 +6936,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   },
@@ -6942,7 +6945,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   }
@@ -6958,7 +6961,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   },
@@ -6967,7 +6970,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   },
@@ -6976,7 +6979,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   }
@@ -6992,7 +6995,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   },
@@ -7001,7 +7004,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   },
@@ -7010,7 +7013,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   }
@@ -7026,7 +7029,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   },
@@ -7035,7 +7038,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   },
@@ -7044,7 +7047,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   }
@@ -7060,7 +7063,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   },
@@ -7069,7 +7072,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   },
@@ -7078,7 +7081,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   }
@@ -7094,7 +7097,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   },
@@ -7103,7 +7106,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   },
@@ -7112,7 +7115,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   }
@@ -7128,7 +7131,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   },
@@ -7137,7 +7140,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   },
@@ -7146,7 +7149,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   }
@@ -7162,7 +7165,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   },
@@ -7171,7 +7174,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   },
@@ -7180,7 +7183,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   }
@@ -7196,7 +7199,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   },
@@ -7205,7 +7208,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   },
@@ -7214,7 +7217,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   }
@@ -7230,7 +7233,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   },
@@ -7239,7 +7242,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   },
@@ -7248,7 +7251,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   }
@@ -7264,7 +7267,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   },
@@ -7273,7 +7276,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   },
@@ -7282,7 +7285,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   }
@@ -7298,7 +7301,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   },
@@ -7307,7 +7310,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   },
@@ -7316,7 +7319,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   }
@@ -7334,7 +7337,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -7343,7 +7346,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -7352,7 +7355,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               }
@@ -7363,7 +7366,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -7379,7 +7382,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   },
@@ -7388,7 +7391,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   },
@@ -7407,7 +7410,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   },
@@ -7416,7 +7419,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   },
@@ -7435,7 +7438,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   },
@@ -7444,7 +7447,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   },
@@ -7463,7 +7466,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   },
@@ -7472,7 +7475,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   },
@@ -7495,7 +7498,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   },
@@ -7504,7 +7507,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   },
@@ -7513,7 +7516,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   }
@@ -7529,7 +7532,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   },
@@ -7538,7 +7541,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   },
@@ -7547,7 +7550,7 @@ ocds_mapping = {
                                     "fields" : {
                                       "keyword" : {
                                         "type" : "keyword",
-                                        "ignore_above" : 256
+                                        "ignore_above" : 1024
                                       }
                                     }
                                   }
@@ -7567,7 +7570,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -7576,7 +7579,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -7585,7 +7588,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           }
@@ -7603,7 +7606,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -7612,7 +7615,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -7621,7 +7624,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       }
@@ -7641,7 +7644,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -7650,7 +7653,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -7659,7 +7662,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       }
@@ -7674,7 +7677,7 @@ ocds_mapping = {
                     "fields" : {
                       "keyword" : {
                         "type" : "keyword",
-                        "ignore_above" : 256
+                        "ignore_above" : 1024
                       }
                     }
                   },
@@ -7688,7 +7691,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -7697,7 +7700,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -7706,7 +7709,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       }
@@ -7722,7 +7725,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -7731,7 +7734,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -7740,7 +7743,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       }
@@ -7760,7 +7763,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -7769,7 +7772,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -7778,7 +7781,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       }
@@ -7794,7 +7797,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -7803,7 +7806,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -7812,7 +7815,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       }
@@ -7830,7 +7833,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -7839,7 +7842,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -7858,7 +7861,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -7867,7 +7870,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -7876,7 +7879,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           }
@@ -7892,7 +7895,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -7901,7 +7904,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -7910,14 +7913,14 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           }
                         }
                       },
                       "id" : {
-                        "type" : "long"
+                        "type" : "text"
                       },
                       "title" : {
                         "properties" : {
@@ -7929,7 +7932,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -7938,7 +7941,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -7947,7 +7950,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           }
@@ -7963,7 +7966,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -7972,7 +7975,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -7981,7 +7984,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           }
@@ -8001,7 +8004,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -8010,7 +8013,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -8029,7 +8032,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -8038,7 +8041,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -8059,7 +8062,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -8068,7 +8071,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -8077,7 +8080,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       }
@@ -8097,7 +8100,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -8106,7 +8109,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -8115,7 +8118,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               }
@@ -8131,7 +8134,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -8140,7 +8143,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -8149,7 +8152,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               }
@@ -8165,7 +8168,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -8174,7 +8177,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -8183,7 +8186,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               }
@@ -8201,7 +8204,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -8210,7 +8213,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -8219,7 +8222,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           }
@@ -8230,7 +8233,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -8244,7 +8247,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -8253,7 +8256,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -8274,7 +8277,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -8283,7 +8286,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -8292,7 +8295,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               }
@@ -8312,7 +8315,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -8321,7 +8324,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -8330,7 +8333,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       }
@@ -8343,7 +8346,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -8357,7 +8360,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -8366,7 +8369,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -8375,7 +8378,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           }
@@ -8393,7 +8396,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -8402,7 +8405,7 @@ ocds_mapping = {
                                 "fields" : {
                                   "keyword" : {
                                     "type" : "keyword",
-                                    "ignore_above" : 256
+                                    "ignore_above" : 1024
                                   }
                                 }
                               },
@@ -8425,7 +8428,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -8434,7 +8437,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -8443,7 +8446,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       }
@@ -8459,7 +8462,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -8468,7 +8471,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -8477,7 +8480,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       }
@@ -8495,7 +8498,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -8504,7 +8507,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -8513,7 +8516,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           }
@@ -8529,7 +8532,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -8538,7 +8541,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -8547,7 +8550,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           }
@@ -8565,7 +8568,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -8574,7 +8577,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -8583,7 +8586,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       }
@@ -8601,7 +8604,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -8610,7 +8613,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -8629,7 +8632,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -8638,7 +8641,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -8656,7 +8659,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -8670,7 +8673,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -8679,7 +8682,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           },
@@ -8688,7 +8691,7 @@ ocds_mapping = {
                             "fields" : {
                               "keyword" : {
                                 "type" : "keyword",
-                                "ignore_above" : 256
+                                "ignore_above" : 1024
                               }
                             }
                           }
@@ -8706,7 +8709,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -8715,7 +8718,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       },
@@ -8724,7 +8727,7 @@ ocds_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       }
@@ -8745,7 +8748,7 @@ ocds_mapping = {
 				"fields" : {
 					"keyword" : {
 						"type" : "keyword",
-						"ignore_above" : 256
+						"ignore_above" : 1024
 					}
 				}					
 	        },		        
@@ -8756,7 +8759,7 @@ ocds_mapping = {
 	                "fields" : {
 	                  "keyword" : {
 	                    "type" : "keyword",
-	                    "ignore_above" : 256
+	                    "ignore_above" : 1024
 	                  }
 	                }
 	              },
@@ -8774,7 +8777,7 @@ ocds_mapping = {
 	                "fields" : {
 	                  "keyword" : {
 	                    "type" : "keyword",
-	                    "ignore_above" : 256
+	                    "ignore_above" : 1024
 	                  }
 	                }
 	              },
@@ -8792,7 +8795,7 @@ ocds_mapping = {
 	                "fields" : {
 	                  "keyword" : {
 	                    "type" : "keyword",
-	                    "ignore_above" : 256
+	                    "ignore_above" : 1024
 	                  }
 	                }
 	              },
@@ -8803,7 +8806,7 @@ ocds_mapping = {
 	                "fields" : {
 	                  "keyword" : {
 	                    "type" : "keyword",
-	                    "ignore_above" : 256
+	                    "ignore_above" : 1024
 	                  }
 	                }						
 	              }
@@ -8826,7 +8829,7 @@ contract_mapping = {
             "fields" : {
               "keyword" : {
                 "type" : "keyword",
-                "ignore_above" : 256
+                "ignore_above" : 1024
               }
             }
           },
@@ -8838,7 +8841,7 @@ contract_mapping = {
             "fields" : {
               "keyword" : {
                 "type" : "keyword",
-                "ignore_above" : 256
+                "ignore_above" : 1024
               }
             }
           },
@@ -8847,7 +8850,7 @@ contract_mapping = {
             "fields" : {
               "keyword" : {
                 "type" : "keyword",
-                "ignore_above" : 256
+                "ignore_above" : 1024
               }
             }
           },
@@ -8856,7 +8859,7 @@ contract_mapping = {
             "fields" : {
               "keyword" : {
                 "type" : "keyword",
-                "ignore_above" : 256
+                "ignore_above" : 1024
               }
             }
           },
@@ -8865,7 +8868,7 @@ contract_mapping = {
             "fields" : {
               "keyword" : {
                 "type" : "keyword",
-                "ignore_above" : 256
+                "ignore_above" : 1024
               }
             }
           }
@@ -8881,7 +8884,7 @@ contract_mapping = {
             "fields" : {
               "keyword" : {
                 "type" : "keyword",
-                "ignore_above" : 256
+                "ignore_above" : 1024
               }
             }
           },
@@ -8892,7 +8895,7 @@ contract_mapping = {
 			"fields" : {
 				"keyword" : {
 					"type" : "keyword",
-					"ignore_above" : 256
+					"ignore_above" : 1024
 				}
 			}
           }
@@ -8906,7 +8909,7 @@ contract_mapping = {
         "fields" : {
           "keyword" : {
             "type" : "keyword",
-            "ignore_above" : 256
+            "ignore_above" : 1024
           }
         }
       },
@@ -8923,7 +8926,7 @@ contract_mapping = {
             "fields" : {
               "keyword" : {
                 "type" : "keyword",
-                "ignore_above" : 256
+                "ignore_above" : 1024
               }
             }
           },
@@ -8932,7 +8935,7 @@ contract_mapping = {
             "fields" : {
               "keyword" : {
                 "type" : "keyword",
-                "ignore_above" : 256
+                "ignore_above" : 1024
               }
             }
           },
@@ -8941,7 +8944,7 @@ contract_mapping = {
             "fields" : {
               "keyword" : {
                 "type" : "keyword",
-                "ignore_above" : 256
+                "ignore_above" : 1024
               }
             }
           },
@@ -8950,7 +8953,7 @@ contract_mapping = {
             "fields" : {
               "keyword" : {
                 "type" : "keyword",
-                "ignore_above" : 256
+                "ignore_above" : 1024
               }
             }
           },
@@ -8959,7 +8962,7 @@ contract_mapping = {
             "fields" : {
               "keyword" : {
                 "type" : "keyword",
-                "ignore_above" : 256
+                "ignore_above" : 1024
               }
             }
           }
@@ -8982,7 +8985,7 @@ contract_mapping = {
             "fields" : {
               "keyword" : {
                 "type" : "keyword",
-                "ignore_above" : 256
+                "ignore_above" : 1024
               }
             }
           },
@@ -8991,7 +8994,7 @@ contract_mapping = {
             "fields" : {
               "keyword" : {
                 "type" : "keyword",
-                "ignore_above" : 256
+                "ignore_above" : 1024
               }
             }
           },
@@ -9002,7 +9005,7 @@ contract_mapping = {
                 "fields" : {
                   "keyword" : {
                     "type" : "keyword",
-                    "ignore_above" : 256
+                    "ignore_above" : 1024
                   }
                 }
               },
@@ -9011,7 +9014,7 @@ contract_mapping = {
                 "fields" : {
                   "keyword" : {
                     "type" : "keyword",
-                    "ignore_above" : 256
+                    "ignore_above" : 1024
                   }
                 }
               }
@@ -9022,7 +9025,7 @@ contract_mapping = {
             "fields" : {
               "keyword" : {
                 "type" : "keyword",
-                "ignore_above" : 256
+                "ignore_above" : 1024
               }
             }
           },
@@ -9036,7 +9039,7 @@ contract_mapping = {
                 "fields" : {
                   "keyword" : {
                     "type" : "keyword",
-                    "ignore_above" : 256
+                    "ignore_above" : 1024
                   }
                 }
               }
@@ -9049,7 +9052,7 @@ contract_mapping = {
         "fields" : {
           "keyword" : {
             "type" : "keyword",
-            "ignore_above" : 256
+            "ignore_above" : 1024
           }
         }
       },
@@ -9072,7 +9075,7 @@ contract_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       }
@@ -9086,7 +9089,7 @@ contract_mapping = {
                     "fields" : {
                       "keyword" : {
                         "type" : "keyword",
-                        "ignore_above" : 256
+                        "ignore_above" : 1024
                       }
                     }
                   },
@@ -9095,7 +9098,7 @@ contract_mapping = {
                     "fields" : {
                       "keyword" : {
                         "type" : "keyword",
-                        "ignore_above" : 256
+                        "ignore_above" : 1024
                       }
                     }
                   },
@@ -9104,7 +9107,7 @@ contract_mapping = {
                     "fields" : {
                       "keyword" : {
                         "type" : "keyword",
-                        "ignore_above" : 256
+                        "ignore_above" : 1024
                       }
                     }
                   }
@@ -9115,7 +9118,7 @@ contract_mapping = {
                 "fields" : {
                   "keyword" : {
                     "type" : "keyword",
-                    "ignore_above" : 256
+                    "ignore_above" : 1024
                   }
                 }
               },
@@ -9124,7 +9127,7 @@ contract_mapping = {
                 "fields" : {
                   "keyword" : {
                     "type" : "keyword",
-                    "ignore_above" : 256
+                    "ignore_above" : 1024
                   }
                 }
               },
@@ -9140,7 +9143,7 @@ contract_mapping = {
                         "fields" : {
                           "keyword" : {
                             "type" : "keyword",
-                            "ignore_above" : 256
+                            "ignore_above" : 1024
                           }
                         }
                       }
@@ -9151,7 +9154,7 @@ contract_mapping = {
                     "fields" : {
                       "keyword" : {
                         "type" : "keyword",
-                        "ignore_above" : 256
+                        "ignore_above" : 1024
                       }
                     }
                   }
@@ -9167,7 +9170,7 @@ contract_mapping = {
                 "fields" : {
                   "keyword" : {
                     "type" : "keyword",
-                    "ignore_above" : 256
+                    "ignore_above" : 1024
                   }
                 }
               },
@@ -9179,7 +9182,7 @@ contract_mapping = {
                 "fields" : {
                   "keyword" : {
                     "type" : "keyword",
-                    "ignore_above" : 256
+                    "ignore_above" : 1024
                   }
                 }
               },
@@ -9188,7 +9191,7 @@ contract_mapping = {
                 "fields" : {
                   "keyword" : {
                     "type" : "keyword",
-                    "ignore_above" : 256
+                    "ignore_above" : 1024
                   }
                 }
               },
@@ -9199,7 +9202,7 @@ contract_mapping = {
                     "fields" : {
                       "keyword" : {
                         "type" : "keyword",
-                        "ignore_above" : 256
+                        "ignore_above" : 1024
                       }
                     }
                   },
@@ -9210,7 +9213,7 @@ contract_mapping = {
 					"fields" : {
 						"keyword" : {
 							"type" : "keyword",
-							"ignore_above" : 256
+							"ignore_above" : 1024
 						}
 					}	
                   }
@@ -9223,7 +9226,7 @@ contract_mapping = {
                     "fields" : {
                       "keyword" : {
                         "type" : "keyword",
-                        "ignore_above" : 256
+                        "ignore_above" : 1024
                       }
                     }
                   },
@@ -9232,7 +9235,7 @@ contract_mapping = {
                     "fields" : {
                       "keyword" : {
                         "type" : "keyword",
-                        "ignore_above" : 256
+                        "ignore_above" : 1024
                       }
                     }
                   }
@@ -9243,7 +9246,7 @@ contract_mapping = {
                 "fields" : {
                   "keyword" : {
                     "type" : "keyword",
-                    "ignore_above" : 256
+                    "ignore_above" : 1024
                   }
                 }
               },
@@ -9257,7 +9260,7 @@ contract_mapping = {
                     "fields" : {
                       "keyword" : {
                         "type" : "keyword",
-                        "ignore_above" : 256
+                        "ignore_above" : 1024
                       }
                     }
                   }
@@ -9279,7 +9282,7 @@ contract_mapping = {
 				"fields" : {
 					"keyword" : {
 						"type" : "keyword",
-						"ignore_above" : 256
+						"ignore_above" : 1024
 					}
 				}	
               },
@@ -9288,7 +9291,7 @@ contract_mapping = {
                 "fields" : {
                   "keyword" : {
                     "type" : "keyword",
-                    "ignore_above" : 256
+                    "ignore_above" : 1024
                   }
                 }
               },
@@ -9297,7 +9300,7 @@ contract_mapping = {
                 "fields" : {
                   "keyword" : {
                     "type" : "keyword",
-                    "ignore_above" : 256
+                    "ignore_above" : 1024
                   }
                 }
               }
@@ -9308,7 +9311,7 @@ contract_mapping = {
             "fields" : {
               "keyword" : {
                 "type" : "keyword",
-                "ignore_above" : 256
+                "ignore_above" : 1024
               }
             }
           },
@@ -9325,7 +9328,7 @@ contract_mapping = {
                 "fields" : {
                   "keyword" : {
                     "type" : "keyword",
-                    "ignore_above" : 256
+                    "ignore_above" : 1024
                   }
                 }
               },
@@ -9339,7 +9342,7 @@ contract_mapping = {
                     "fields" : {
                       "keyword" : {
                         "type" : "keyword",
-                        "ignore_above" : 256
+                        "ignore_above" : 1024
                       }
                     }
                   }
@@ -9364,7 +9367,7 @@ contract_mapping = {
         "fields" : {
           "keyword" : {
             "type" : "keyword",
-            "ignore_above" : 256
+            "ignore_above" : 1024
           }
         }
       },
@@ -9377,7 +9380,7 @@ contract_mapping = {
             "fields" : {
               "keyword" : {
                 "type" : "keyword",
-                "ignore_above" : 256
+                "ignore_above" : 1024
               }
             }
           },
@@ -9388,7 +9391,7 @@ contract_mapping = {
 				"fields" : {
 					"keyword" : {
 						"type" : "keyword",
-						"ignore_above" : 256
+						"ignore_above" : 1024
 					}
 				}
           }
@@ -9401,7 +9404,7 @@ contract_mapping = {
 		"fields" : {
 			"keyword" : {
 				"type" : "keyword",
-				"ignore_above" : 256
+				"ignore_above" : 1024
 			}
 		}			
       },
@@ -9415,7 +9418,7 @@ contract_mapping = {
             "fields" : {
               "keyword" : {
                 "type" : "keyword",
-                "ignore_above" : 256
+                "ignore_above" : 1024
               }
             }
           }
@@ -9428,7 +9431,7 @@ contract_mapping = {
                 "fields" : {
                   "keyword" : {
                     "type" : "keyword",
-                    "ignore_above" : 256
+                    "ignore_above" : 1024
                   }
                 }
       		},
@@ -9437,7 +9440,7 @@ contract_mapping = {
                 "fields" : {
                   "keyword" : {
                     "type" : "keyword",
-                    "ignore_above" : 256
+                    "ignore_above" : 1024
                   }
                 }
       		},
@@ -9448,7 +9451,7 @@ contract_mapping = {
 				"fields" : {
 					"keyword" : {
 						"type" : "keyword",
-						"ignore_above" : 256
+						"ignore_above" : 1024
 					}
 				}					
 	        },
@@ -9459,7 +9462,7 @@ contract_mapping = {
 				"fields" : {
 					"keyword" : {
 						"type" : "keyword",
-						"ignore_above" : 256
+						"ignore_above" : 1024
 					}
 				}					
 	        },		        
@@ -9470,7 +9473,7 @@ contract_mapping = {
 	                "fields" : {
 	                  "keyword" : {
 	                    "type" : "keyword",
-	                    "ignore_above" : 256
+	                    "ignore_above" : 1024
 	                  }
 	                }
 	              },
@@ -9488,7 +9491,7 @@ contract_mapping = {
 	                "fields" : {
 	                  "keyword" : {
 	                    "type" : "keyword",
-	                    "ignore_above" : 256
+	                    "ignore_above" : 1024
 	                  }
 	                }
 	              },
@@ -9513,7 +9516,7 @@ transaction_mapping = {
 		    "fields" : {
 		      "keyword" : {
 		        "type" : "keyword",
-		        "ignore_above" : 256
+		        "ignore_above" : 1024
 		      }
 		    }
 		  },
@@ -9525,7 +9528,7 @@ transaction_mapping = {
 		    "fields" : {
 		      "keyword" : {
 		        "type" : "keyword",
-		        "ignore_above" : 256
+		        "ignore_above" : 1024
 		      }
 		    }
 		  },
@@ -9534,7 +9537,7 @@ transaction_mapping = {
 		    "fields" : {
 		      "keyword" : {
 		        "type" : "keyword",
-		        "ignore_above" : 256
+		        "ignore_above" : 1024
 		      }
 		    }
 		  },
@@ -9545,7 +9548,7 @@ transaction_mapping = {
 		        "fields" : {
 		          "keyword" : {
 		            "type" : "keyword",
-		            "ignore_above" : 256
+		            "ignore_above" : 1024
 		          }
 		        }
 		      },
@@ -9556,7 +9559,7 @@ transaction_mapping = {
 				    "fields" : {
               "keyword" : {
   						  "type" : "keyword",
-  						  "ignore_above" : 256
+  						  "ignore_above" : 1024
 					    }
 				    }
 		      }
@@ -9569,7 +9572,7 @@ transaction_mapping = {
 		        "fields" : {
 		          "keyword" : {
 		            "type" : "keyword",
-		            "ignore_above" : 256
+		            "ignore_above" : 1024
 		          }
 		        }
 		      },
@@ -9580,7 +9583,7 @@ transaction_mapping = {
 					"fields" : {
 						"keyword" : {
 							"type" : "keyword",
-							"ignore_above" : 256
+							"ignore_above" : 1024
 						}
 					}
 		      }
@@ -9591,7 +9594,7 @@ transaction_mapping = {
 		    "fields" : {
 		      "keyword" : {
 		        "type" : "keyword",
-		        "ignore_above" : 256
+		        "ignore_above" : 1024
 		      }
 		    }
 		  },
@@ -9605,7 +9608,7 @@ transaction_mapping = {
 		        "fields" : {
 		          "keyword" : {
 		            "type" : "keyword",
-		            "ignore_above" : 256
+		            "ignore_above" : 1024
 		          }
 		        }
 		      }
@@ -9622,7 +9625,7 @@ transaction_mapping = {
 						"fields" : {
 							"keyword" : {
 								"type" : "keyword",
-								"ignore_above" : 256
+								"ignore_above" : 1024
 							}
 						}
 					},
@@ -9633,7 +9636,7 @@ transaction_mapping = {
 						"fields" : {
 							"keyword" : {
 								"type" : "keyword",
-								"ignore_above" : 256
+								"ignore_above" : 1024
 							}
 						}
 					}
@@ -9646,7 +9649,7 @@ transaction_mapping = {
 				"fields" : {
 					"keyword" : {
 						"type" : "keyword",
-						"ignore_above" : 256
+						"ignore_above" : 1024
 					}
 				}
 			},
@@ -9657,7 +9660,7 @@ transaction_mapping = {
 						"fields" : {
 							"keyword" : {
 								"type" : "keyword",
-								"ignore_above" : 256
+								"ignore_above" : 1024
 							}
 						}
 					},
@@ -9675,7 +9678,7 @@ transaction_mapping = {
 						"fields" : {
 							"keyword" : {
 								"type" : "keyword",
-								"ignore_above" : 256
+								"ignore_above" : 1024
 							}
 						}
 					},
@@ -9691,7 +9694,7 @@ transaction_mapping = {
 				"fields" : {
 					"keyword" : {
 						"type" : "keyword",
-						"ignore_above" : 256
+						"ignore_above" : 1024
 					}
 				}
 			},
@@ -9700,7 +9703,7 @@ transaction_mapping = {
 				"fields" : {
 					"keyword" : {
 						"type" : "keyword",
-						"ignore_above" : 256
+						"ignore_above" : 1024
 					}
 				}
 			},
@@ -9715,7 +9718,7 @@ supplier_mapping = {
         "type": "text",
         "fields": {
           "keyword": {
-            "ignore_above": 256,
+            "ignore_above": 1024,
             "type": "keyword"
           }
         }
@@ -9727,7 +9730,7 @@ supplier_mapping = {
         "fields" : {
           "keyword" : {
             "type" : "keyword",
-            "ignore_above" : 256
+            "ignore_above" : 1024
           }
         }
       },
@@ -9765,7 +9768,7 @@ supplier_mapping = {
         "type": "text",
         "fields": {
           "keyword": {
-            "ignore_above": 256,
+            "ignore_above": 1024,
             "type": "keyword"
           }
         }
@@ -9774,7 +9777,7 @@ supplier_mapping = {
         "type": "text",
         "fields": {
           "keyword": {
-            "ignore_above": 256,
+            "ignore_above": 1024,
             "type": "keyword"
           }
         }
