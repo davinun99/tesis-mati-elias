@@ -11,7 +11,7 @@ settings = {
 		"filter": {
 			"autocomplete_filter": {
 				"type": "ngram", #edge_ngram
-				"min_gram":2,
+				"min_gram":19,
 				"max_gram":20,
 				"token_chars": [
 					"letter",
