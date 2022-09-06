@@ -40,7 +40,14 @@ ELASTICSEARCH_PASS = settings.ELASTICSEARCH_PASS
 OCDS_INDEX = 'ocds'
 CONTRACT_INDEX = 'contracts'
 TRANSACTION_INDEX = 'transactions'
-
+cliente = elasticsearch.Elasticsearch(
+		# ELASTICSEARCH_DSL_HOST, 
+		# timeout=120, 
+		cloud_id="Tesis_test_1:dXMtY2VudHJhbDEuZ2NwLmNsb3VkLmVzLmlvOjQ0MyRhZTYxNDM0MWEyOWQ0YzMyYjU2MTVmNjEyZGY5ZGViYiQxZjQ2YzVlMzAyMTM0NjI3YmJiZmI2MjlmNzYxYTQyNw==",
+		# basic_auth=(ELASTICSEARCH_USERNAME, ELASTICSEARCH_PASS),
+		http_auth=(ELASTICSEARCH_USERNAME, ELASTICSEARCH_PASS)
+		# use_ssl=True,
+	)
 urllib3.disable_warnings()
 
 """
@@ -271,7 +278,7 @@ def extra_fields_records(ijson, md5):
 def import_to_elasticsearch(files, clean, forzarInsercionYear, forzarInsercionRecords):
 	print("importando a ES")
 
-	es = elasticsearch.Elasticsearch(ELASTICSEARCH_DSL_HOST, timeout=120, http_auth=(ELASTICSEARCH_USERNAME, ELASTICSEARCH_PASS))
+	es = cliente
 
 	# Delete the index
 	if clean is not None:
@@ -303,7 +310,7 @@ def import_to_elasticsearch(files, clean, forzarInsercionYear, forzarInsercionRe
 	print('indices creados');
 	time.sleep(5)
 
-	dfTazasCambio = tazasDeCambio()
+	# dfTazasCambio = tazasDeCambio()
 
 	def transaction_generator(contract):
 		if '_source' in contract:
@@ -454,8 +461,8 @@ def import_to_elasticsearch(files, clean, forzarInsercionYear, forzarInsercionRe
 
 					if 'currency' in c['value']:
 						if c['value']['currency'] == 'USD':
-							cambio = convertirMoneda(dfTazasCambio, date[0:4], date[5:7], c['value']['amount'])
-							
+							# cambio = convertirMoneda(dfTazasCambio, date[0:4], date[5:7], c['value']['amount'])
+							cambio = 6912
 							if cambio is not None:
 								monedaLocal["amount"] = c['value']['amount'] * cambio
 								monedaLocal["exchangeRate"] = cambio
@@ -539,6 +546,9 @@ def import_to_elasticsearch(files, clean, forzarInsercionYear, forzarInsercionRe
 
 									if 'compiledRelease' in record:
 										if 'contracts' in record['compiledRelease']:
+											# FALLA ACA , 'Action/metadata line [1] contains an unknown parameter [_type]'
+											xd = contract_generator(record['compiledRelease'])
+											print(xd)
 											result = elasticsearch.helpers.bulk(es, contract_generator(record['compiledRelease']), raise_on_error=False, request_timeout=120)
 											print("contract", result)
 
@@ -557,6 +567,9 @@ def import_to_elasticsearch(files, clean, forzarInsercionYear, forzarInsercionRe
 	print("Por procesar:", years)
 
 	for year in years:
+		## FALLA ACA
+		# print('\t\t generador(year)', generador(year))
+		# return
 		result = elasticsearch.helpers.bulk(es, generador(year), raise_on_error=False, request_timeout=3000)
 		print("records procesados", result)
 
@@ -610,7 +623,7 @@ def recordExists(ocid, md5):
 	campos = ['extra.hash_md5']
 
 	try:
-		es = elasticsearch.Elasticsearch(ELASTICSEARCH_DSL_HOST, max_retries=10, retry_on_timeout=True, http_auth=(ELASTICSEARCH_USERNAME, ELASTICSEARCH_PASS))
+		es = cliente
 		res = es.get(index=OCDS_INDEX, doc_type='record', id=ocid, _source=campos)
 
 		esMD5 = res['_source']['extra']['hash_md5']
@@ -633,7 +646,7 @@ def eliminarDocumentoES(ocid):
 	query = {'query': {'term':{'extra.ocid.keyword':ocid}}}
 
 	try:
-		es = elasticsearch.Elasticsearch(ELASTICSEARCH_DSL_HOST, max_retries=10, retry_on_timeout=True, http_auth=(ELASTICSEARCH_USERNAME, ELASTICSEARCH_PASS))
+		es = cliente
 
 		if es.indices.exists(index=CONTRACT_INDEX):
 			res = es.delete_by_query(
@@ -759,16 +772,16 @@ def actualizarArchivoProcesado(year, contador):
 	retorna un pandas.dataframe donde las filas son meses y las columnas son anios.
 """
 def tazasDeCambio():
-	archivo = carpetaArchivos + 'tazas_de_cambio.xls'
-	archivoCSV = carpetaArchivos + 'tazas_de_cambio.csv'
-	serieMensualUSD = 'https://www.bch.hn/esteco/ianalisis/proint.xls'
+	# archivo = carpetaArchivos + 'tazas_de_cambio.xls'
+	# archivoCSV = carpetaArchivos + 'tazas_de_cambio.csv'
+	# serieMensualUSD = 'https://www.bch.hn/esteco/ianalisis/proint.xls'
 
 	# print('ok')
 	# try:
-	obtenerArchivoExcel = requests.get(serieMensualUSD, verify=False)
-	open(archivo, 'wb').write(obtenerArchivoExcel.content)
-	tc = pandas.read_excel(io=archivo, sheet_name='proint', header=16, index_col=None, nrows=13)
-	tc = tc.drop(columns=['Unnamed: 0'], axis=1)
+	# obtenerArchivoExcel = requests.get(serieMensualUSD, verify=False)
+	# open(archivo, 'wb').write(obtenerArchivoExcel.content)
+	# tc = pandas.read_excel(io=archivo, sheet_name='proint', header=16, index_col=None, nrows=13)
+	# tc = tc.drop(columns=['Unnamed: 0'], axis=1)
 	# except Exception as e:
 		# print("error", e)
 		# tc = pandas.DataFrame([])
