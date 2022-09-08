@@ -41,11 +41,11 @@ OCDS_INDEX = 'ocds'
 CONTRACT_INDEX = 'contracts'
 TRANSACTION_INDEX = 'transactions'
 cliente = elasticsearch.Elasticsearch(
-		# ELASTICSEARCH_DSL_HOST, 
+		ELASTICSEARCH_DSL_HOST, 
 		# timeout=120, 
-		cloud_id="Tesis_test_1:dXMtY2VudHJhbDEuZ2NwLmNsb3VkLmVzLmlvOjQ0MyRhZTYxNDM0MWEyOWQ0YzMyYjU2MTVmNjEyZGY5ZGViYiQxZjQ2YzVlMzAyMTM0NjI3YmJiZmI2MjlmNzYxYTQyNw==",
 		# basic_auth=(ELASTICSEARCH_USERNAME, ELASTICSEARCH_PASS),
-		http_auth=(ELASTICSEARCH_USERNAME, ELASTICSEARCH_PASS)
+		http_auth=(ELASTICSEARCH_USERNAME, ELASTICSEARCH_PASS),
+		ca_certs="/Users/davidnunez/http_ca.crt",
 		# use_ssl=True,
 	)
 urllib3.disable_warnings()
