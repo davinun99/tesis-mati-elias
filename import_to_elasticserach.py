@@ -291,17 +291,16 @@ def import_to_elasticsearch(files, clean, forzarInsercionYear, forzarInsercionRe
 			result = es.indices.delete(index=TRANSACTION_INDEX, ignore=[404])
 			pprint(result)
 
-	result = es.indices.create(index=OCDS_INDEX, body={"mappings": mapeo_es.ocds_mapping, "settings": mapeo_es.settings}, ignore=[400])
-
+	result = es.indices.create(index=OCDS_INDEX, body={"mappings": mapeo_es.ocds_mapping["record"], "settings": mapeo_es.settings}, ignore=[400])
 	if 'error' in result and result['error']['reason'] == 'index ocds already exists':
 		print('Updating existing index')
 
-	result = es.indices.create(index=CONTRACT_INDEX, body={"mappings": mapeo_es.contract_mapping, "settings": mapeo_es.settings}, ignore=[400])
+	result = es.indices.create(index=CONTRACT_INDEX, body={"mappings": mapeo_es.contract_mapping["contract"], "settings": mapeo_es.settings}, ignore=[400])
 
 	if 'error' in result and result['error']['reason'] == 'index contracts already exists':
 		print('Updating existing index')
 
-	result = es.indices.create(index=TRANSACTION_INDEX, body={"mappings": mapeo_es.transaction_mapping, "settings": mapeo_es.settings}, ignore=[400])
+	result = es.indices.create(index=TRANSACTION_INDEX, body={"mappings": mapeo_es.transaction_mapping["transactions"], "settings": mapeo_es.settings}, ignore=[400])
 
 	if 'error' in result and result['error']['reason'] == 'index transactions already exists':
 		print('Updating existing index')
