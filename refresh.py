@@ -6,7 +6,15 @@ import mapeo_es, settings
 ELASTICSEARCH_DSL_HOST = '{0}:{1}/'.format(settings.ELASTICSEARCH_SERVER_IP, settings.ELASTICSEARCH_SERVER_PORT) #No agregar en esta línea.
 ELASTICSEARCH_USERNAME = settings.ELASTICSEARCH_USERNAME
 ELASTICSEARCH_PASS = settings.ELASTICSEARCH_PASS
-
+cliente = Elasticsearch(
+		ELASTICSEARCH_DSL_HOST, 
+		# timeout=120, 
+		# cloud_id="Tesis_test_1:dXMtY2VudHJhbDEuZ2NwLmNsb3VkLmVzLmlvOjQ0MyRhZTYxNDM0MWEyOWQ0YzMyYjU2MTVmNjEyZGY5ZGViYiQxZjQ2YzVlMzAyMTM0NjI3YmJiZmI2MjlmNzYxYTQyNw==",
+		# basic_auth=(ELASTICSEARCH_USERNAME, ELASTICSEARCH_PASS),
+		http_auth=(ELASTICSEARCH_USERNAME, ELASTICSEARCH_PASS)
+		# use_ssl=True,
+	)
+# cliente.info()
 """ Funcion para pre-cargar los datos de proveedores. """
 def cadenaAleatoria(stringLength=8):
 	letters = string.ascii_lowercase
@@ -16,11 +24,8 @@ def eliminarProveedoresES(procesoId):
 	query = {"query":{"bool":{"must_not":[{"term":{"procesoImportacionId.keyword":"{0}".format(procesoId)}}]}}}
 
 	try:
-		es = Elasticsearch(
-			ELASTICSEARCH_DSL_HOST, 
-			timeout=120, 
-			http_auth=(ELASTICSEARCH_USERNAME, ELASTICSEARCH_PASS)
-		)
+		es =  cliente
+		# es = Elasticsearch('https://elastic:fwpxL6WaV4olwGXW3l246sfy@tesis-test-1.kb.us-central1.gcp.cloud.es.io:9243/')
 
 		if es.indices.exists(index="supplier"):
 			res = es.delete_by_query(index="supplier",body=query)
@@ -52,11 +57,6 @@ def scanAggs(search, source_aggs, inner_aggs={}, inner_aggs_2={}, size=10):
 		response = run_search(after=after)
 
 def crearIndiceProveedores():
-	cliente = Elasticsearch(
-		ELASTICSEARCH_DSL_HOST, 
-		timeout=120, 
-		http_auth=(ELASTICSEARCH_USERNAME, ELASTICSEARCH_PASS)
-	)
 
 	result = cliente.indices.create(index="supplier", body={"mappings": mapeo_es.supplier_mapping, "settings": mapeo_es.settings}, ignore=[400])
 
@@ -68,11 +68,6 @@ def crearIndiceProveedores():
 	print("indice ok")
 
 def importarProveedoresSEFIN(procesoImportacionId):
-	cliente = Elasticsearch(
-		ELASTICSEARCH_DSL_HOST, 
-		timeout=120, 
-		http_auth=(ELASTICSEARCH_USERNAME, ELASTICSEARCH_PASS)
-	)
 
 	s = Search(using=cliente, index='transaction')
 
@@ -132,11 +127,6 @@ def importarProveedoresSEFIN(procesoImportacionId):
 	result = helpers.bulk(cliente, importarDatos(procesoImportacionId), raise_on_error=False, request_timeout=120)
 
 def importarProveedoresONCAE(procesoImportacionId):
-	cliente = Elasticsearch(
-		ELASTICSEARCH_DSL_HOST, 
-		timeout=120, 
-		http_auth=(ELASTICSEARCH_USERNAME, ELASTICSEARCH_PASS)
-	)
 
 	s = Search(using=cliente, index='contract')
 

@@ -268,10 +268,10 @@ def extra_fields_records(ijson, md5):
 	forzarInsercionYear = True, vuelve a procesar un anio aunque el hash de records sea el mismo. 
 	forzarInsercionRecords = True, vuelve a procesar cada record aunque ya este indexando en elasticsearch y el hash sea el mismo.
 """
+es = elasticsearch.Elasticsearch(ELASTICSEARCH_DSL_HOST, timeout=120, http_auth=(ELASTICSEARCH_USERNAME, ELASTICSEARCH_PASS))
+
 def import_to_elasticsearch(files, clean, forzarInsercionYear, forzarInsercionRecords):
 	print("importando a ES")
-
-	es = elasticsearch.Elasticsearch(ELASTICSEARCH_DSL_HOST, timeout=120, http_auth=(ELASTICSEARCH_USERNAME, ELASTICSEARCH_PASS))
 
 	# Delete the index
 	if clean is not None:
@@ -303,7 +303,7 @@ def import_to_elasticsearch(files, clean, forzarInsercionYear, forzarInsercionRe
 	print('indices creados');
 	time.sleep(5)
 
-	dfTazasCambio = tazasDeCambio()
+	# dfTazasCambio = tazasDeCambio()
 
 	def transaction_generator(contract):
 		if '_source' in contract:
@@ -454,7 +454,7 @@ def import_to_elasticsearch(files, clean, forzarInsercionYear, forzarInsercionRe
 
 					if 'currency' in c['value']:
 						if c['value']['currency'] == 'USD':
-							cambio = convertirMoneda(dfTazasCambio, date[0:4], date[5:7], c['value']['amount'])
+							cambio = 6912
 							
 							if cambio is not None:
 								monedaLocal["amount"] = c['value']['amount'] * cambio
@@ -610,7 +610,6 @@ def recordExists(ocid, md5):
 	campos = ['extra.hash_md5']
 
 	try:
-		es = elasticsearch.Elasticsearch(ELASTICSEARCH_DSL_HOST, max_retries=10, retry_on_timeout=True, http_auth=(ELASTICSEARCH_USERNAME, ELASTICSEARCH_PASS))
 		res = es.get(index=OCDS_INDEX, doc_type='record', id=ocid, _source=campos)
 
 		esMD5 = res['_source']['extra']['hash_md5']
@@ -633,8 +632,6 @@ def eliminarDocumentoES(ocid):
 	query = {'query': {'term':{'extra.ocid.keyword':ocid}}}
 
 	try:
-		es = elasticsearch.Elasticsearch(ELASTICSEARCH_DSL_HOST, max_retries=10, retry_on_timeout=True, http_auth=(ELASTICSEARCH_USERNAME, ELASTICSEARCH_PASS))
-
 		if es.indices.exists(index=CONTRACT_INDEX):
 			res = es.delete_by_query(
 				index=CONTRACT_INDEX,
