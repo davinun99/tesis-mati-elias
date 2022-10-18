@@ -481,18 +481,18 @@ def import_to_elasticsearch(files, clean, forzarInsercionYear, forzarInsercionRe
 							if 'amount' in i['unit']['value']:
 								i['extra']['total'] = float(i['unit']['value']['amount']) * float(i['quantity'])
 
-			contract_document = {}
-			contract_document['_id'] = compiledRelease["ocid"] + str(c["id"])
-			contract_document['_index'] = CONTRACT_INDEX
-			contract_document['_type'] = 'contract'
-			contract_document['_source'] = c
-			contract_document['_source']['extra'] = extra
+			if 'id' in c:
+				contract_document = {}
+				contract_document['_id'] = compiledRelease["ocid"] + str(c["id"])
+				contract_document['_index'] = CONTRACT_INDEX
+				contract_document['_type'] = 'contract'
+				contract_document['_source'] = c
+				contract_document['_source']['extra'] = extra
 
-			if 'implementation' in c:
-				result = elasticsearch.helpers.bulk(es, transaction_generator(contract_document), raise_on_error=False, request_timeout=120)
-				print("transaction", result)
-
-			yield contract_document		
+				if 'implementation' in c:
+					result = elasticsearch.helpers.bulk(es, transaction_generator(contract_document), raise_on_error=False, request_timeout=120)
+					print("transaction", result)
+				yield contract_document
 
 	def generador(file_year):
 		contador = 0
@@ -552,7 +552,7 @@ def import_to_elasticsearch(files, clean, forzarInsercionYear, forzarInsercionRe
 
 	#Linea importante para procesar solo lo necesario
 	years = detectarAniosPorProcesar(files[0])
-	# years = ['2018',] # Variable para forzar la insercion de un anio especifico
+	# years = ['2022',] # Variable para forzar la insercion de un anio especifico
 
 	print("Por procesar:", years)
 
