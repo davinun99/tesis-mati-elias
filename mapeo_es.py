@@ -2,6 +2,7 @@ settings = {
 	"max_result_window": 500000,
 	"index" : {
 		"mapping" : {
+			# "single_type": False,
 			"total_fields" : {
 				"limit" : "100000"
 			}
@@ -11,7 +12,7 @@ settings = {
 		"filter": {
 			"autocomplete_filter": {
 				"type": "ngram", #edge_ngram
-				"min_gram":2,
+				"min_gram":19,
 				"max_gram":20,
 				"token_chars": [
 					"letter",
@@ -9616,99 +9617,99 @@ transaction_mapping = {
 		  }
 		}
 	},
-	"extra" : {
-		"properties": {
-			"buyer" : {
-				"properties" : {
-					"id" : {
-						"type" : "text",
-						"fields" : {
-							"keyword" : {
-								"type" : "keyword",
-								"ignore_above" : 1024
-							}
-						}
-					},
-					"name" : {
-						"type" : "text",
-						"analyzer": "ngram_analyzer",
-						"search_analyzer": "whitespace_analyzer",
-						"fields" : {
-							"keyword" : {
-								"type" : "keyword",
-								"ignore_above" : 1024
-							}
-						}
-					}
-				}
-			},
-			"buyerFullName" : {
-				"type" : "text",
-				"analyzer": "ngram_analyzer",
-				"search_analyzer": "whitespace_analyzer",
-				"fields" : {
-					"keyword" : {
-						"type" : "keyword",
-						"ignore_above" : 1024
-					}
-				}
-			},
-			"parent1" : {
-				"properties" : {
-					"id" : {
-						"type" : "text",
-						"fields" : {
-							"keyword" : {
-								"type" : "keyword",
-								"ignore_above" : 1024
-							}
-						}
-					},
-					"name" : {
-						"type" : "text",
-						"analyzer": "ngram_analyzer",
-						"search_analyzer": "whitespace_analyzer"
-					}
-				}
-			},
-			"parent2" : {
-				"properties" : {
-					"id" : {
-						"type" : "text",
-						"fields" : {
-							"keyword" : {
-								"type" : "keyword",
-								"ignore_above" : 1024
-							}
-						}
-					},
-					"name" : {
-						"type" : "text",
-						"analyzer": "ngram_analyzer",
-						"search_analyzer": "whitespace_analyzer"
-					}
-				}
-			},
-			"ocid": {
-				"type" : "text",
-				"fields" : {
-					"keyword" : {
-						"type" : "keyword",
-						"ignore_above" : 1024
-					}
-				}
-			},
-			"contractId": {
-				"type" : "text",
-				"fields" : {
-					"keyword" : {
-						"type" : "keyword",
-						"ignore_above" : 1024
-					}
-				}
-			},
-		}
-	}
+	# "extra" : {
+	# 	"properties": {
+	# 		"buyer" : {
+	# 			"properties" : {
+	# 				"id" : {
+	# 					"type" : "text",
+	# 					"fields" : {
+	# 						"keyword" : {
+	# 							"type" : "keyword",
+	# 							"ignore_above" : 1024
+	# 						}
+	# 					}
+	# 				},
+	# 				"name" : {
+	# 					"type" : "text",
+	# 					"analyzer": "ngram_analyzer",
+	# 					"search_analyzer": "whitespace_analyzer",
+	# 					"fields" : {
+	# 						"keyword" : {
+	# 							"type" : "keyword",
+	# 							"ignore_above" : 1024
+	# 						}
+	# 					}
+	# 				}
+	# 			}
+	# 		},
+	# 		"buyerFullName" : {
+	# 			"type" : "text",
+	# 			"analyzer": "ngram_analyzer",
+	# 			"search_analyzer": "whitespace_analyzer",
+	# 			"fields" : {
+	# 				"keyword" : {
+	# 					"type" : "keyword",
+	# 					"ignore_above" : 1024
+	# 				}
+	# 			}
+	# 		},
+	# 		"parent1" : {
+	# 			"properties" : {
+	# 				"id" : {
+	# 					"type" : "text",
+	# 					"fields" : {
+	# 						"keyword" : {
+	# 							"type" : "keyword",
+	# 							"ignore_above" : 1024
+	# 						}
+	# 					}
+	# 				},
+	# 				"name" : {
+	# 					"type" : "text",
+	# 					"analyzer": "ngram_analyzer",
+	# 					"search_analyzer": "whitespace_analyzer"
+	# 				}
+	# 			}
+	# 		},
+	# 		"parent2" : {
+	# 			"properties" : {
+	# 				"id" : {
+	# 					"type" : "text",
+	# 					"fields" : {
+	# 						"keyword" : {
+	# 							"type" : "keyword",
+	# 							"ignore_above" : 1024
+	# 						}
+	# 					}
+	# 				},
+	# 				"name" : {
+	# 					"type" : "text",
+	# 					"analyzer": "ngram_analyzer",
+	# 					"search_analyzer": "whitespace_analyzer"
+	# 				}
+	# 			}
+	# 		},
+	# 		"ocid": {
+	# 			"type" : "text",
+	# 			"fields" : {
+	# 				"keyword" : {
+	# 					"type" : "keyword",
+	# 					"ignore_above" : 1024
+	# 				}
+	# 			}
+	# 		},
+	# 		"contractId": {
+	# 			"type" : "text",
+	# 			"fields" : {
+	# 				"keyword" : {
+	# 					"type" : "keyword",
+	# 					"ignore_above" : 1024
+	# 				}
+	# 			}
+	# 		},
+	# 	}
+	# }
 }
 
 supplier_mapping = {
